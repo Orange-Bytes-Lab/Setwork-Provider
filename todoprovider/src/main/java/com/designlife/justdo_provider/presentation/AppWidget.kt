@@ -20,6 +20,13 @@ class AppWidget : AppWidgetProvider() {
         appWidgetManager: AppWidgetManager,
         appWidgetIds: IntArray
     ) {
+        val views = RemoteViews(context.packageName, R.layout.widget_task)
+        val dayText = ProviderUtils.getCurrentDay()
+        val dayNumberText = ProviderUtils.getCurrentDayNumber()
+        views.setTextViewText(R.id.dayText,dayText)
+        views.setTextViewText(R.id.dayNumber,dayNumberText)
+        appWidgetManager.updateAppWidget(appWidgetIds, views)
+
         for (appWidgetId in appWidgetIds) {
 
             val intent = Intent(context, TaskWidgetService::class.java).apply {
