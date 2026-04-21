@@ -13,6 +13,11 @@ class SetworkProvider(
         SetworkProvider.setTask(task)
         updateRemoteView()
     }
+    
+    fun removeTask(task: ProviderTask){
+        SetworkProvider.tasks.removeIf { stask -> stask.id == task.id }
+        updateRemoteView()
+    }
 
     fun addTaskList(tasks: List<ProviderTask>){
         SetworkProvider.setTasks(tasks)
