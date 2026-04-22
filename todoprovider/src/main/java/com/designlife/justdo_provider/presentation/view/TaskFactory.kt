@@ -3,7 +3,6 @@ package com.designlife.justdo_provider.presentation.view
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.content.res.ColorStateList
 import android.os.Build
 import android.widget.RemoteViews
 import android.widget.RemoteViewsService
@@ -13,7 +12,6 @@ import com.designlife.justdo_provider.R
 import com.designlife.justdo_provider.SetworkProvider
 import com.designlife.justdo_provider.data.ProviderTask
 import com.designlife.justdo_provider.common.ProviderUtils
-import androidx.core.net.toUri
 
 class TaskFactory(
     private val context: Context

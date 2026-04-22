@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bg_layout">
-
     <!-- 🔷 HEADER -->
     <LinearLayout
         android:id="@+id/header"
@@ -16,7 +15,6 @@
         android:gravity="center_vertical"
         android:padding="12dp"
         android:background="@drawable/bg_header">
-
         <!-- Left text -->
         <TextView
             android:id="@+id/dayText"
@@ -27,7 +25,6 @@
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@color/blue_color"/>
-
         <!-- Left text -->
         <TextView
             android:id="@+id/dayNumber"
@@ -38,14 +35,11 @@
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"/>
-
-
         <!-- RIGHT: Buttons container -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
             <!-- Chat Button -->
             <ImageView
                 android:id="@+id/btnChat"
@@ -67,7 +61,6 @@
                 android:src="@drawable/ic_add"
                 android:scaleType="centerInside"/>
 
-
             <ImageView
                 android:id="@+id/emptyTaskBtnRefresh"
                 android:layout_width="18dp"
@@ -81,10 +74,7 @@
 
         </LinearLayout>
 
-
-
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -181,11 +171,8 @@
                     android:ellipsize="end"/>
 
             </LinearLayout>
-
-
         </LinearLayout>
     </LinearLayout>
-
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
@@ -196,8 +183,6 @@
         android:layout_height="match_parent"
         android:divider="@android:color/transparent"
         android:dividerHeight="8dp"/>
-
-
     <!-- Empty Widget Task -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -244,5 +229,4 @@
                 android:textColor="@android:color/white"/>
         </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>

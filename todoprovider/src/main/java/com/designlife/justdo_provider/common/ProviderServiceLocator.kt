@@ -7,7 +7,7 @@ import com.designlife.justdo_provider.domain.WeatherUpdateRepository
 object ProviderServiceLocator {
     private var weatherUpdateRepository : WeatherUpdateRepository? = null
 
-    public fun provideWeatherUpdateRepository() : WeatherUpdateRepository{
+    fun provideWeatherUpdateRepository() : WeatherUpdateRepository{
         return weatherUpdateRepository ?: createWeatherUpdateRepository()
     }
 
