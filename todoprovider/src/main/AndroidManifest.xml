@@ -3,19 +3,36 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application>
         <receiver
             android:name=".presentation.AppWidget"
-            android:exported="false">
-
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>
-
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/app_widget_info"/>
+        </receiver>
+
+        <receiver
+            android:name=".common.receiver.WidgetUpdateReceiver"
+            android:exported="false">
+            <intent-filter>
+                <!-- AlarmManager actions -->
+                <action android:name="com.designlife.justdo_provider.ACTION_CLOCK_TICK" />
+                <action android:name="com.designlife.justdo_provider.ACTION_TEMP_TICK" />
+                <action android:name="com.designlife.justdo_provider.ACTION_DAILY_TICK" />
+                <!-- System broadcasts -->
+                <action android:name="android.intent.action.TIME_TICK" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
         </receiver>
         <service
             android:name=".presentation.view.TaskWidgetService"

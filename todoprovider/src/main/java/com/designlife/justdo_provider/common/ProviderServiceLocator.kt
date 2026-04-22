@@ -16,7 +16,7 @@ object ProviderServiceLocator {
         val updateRepository = WeatherUpdateRepository(
             weatherService = weatherService
         )
-        return updateRepository!!
+        return updateRepository
     }
 
 }
